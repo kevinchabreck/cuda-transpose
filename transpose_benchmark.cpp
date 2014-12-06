@@ -107,8 +107,8 @@ void run_benchmarks(int request_size, int cohort_size, int iterations){
 
 int main(void)
 {
-  int request_size = 1024; // length of requests in bytes
-  int cohort_size  = 4096; // # of requests in cohorts (shouldnt change)
   int iterations   = 100;  // number of iterations to run benchmarks
+  int cohort_size  = 4096; // # of requests in cohorts (shouldnt change)
+  int request_size[3] = {512, 1024, 4096}; // length of requests in bytes
   run_benchmarks(request_size, cohort_size, iterations);
 }
